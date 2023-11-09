@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Home from './Home.tsx'
 
 /*function App() {
   const [count, setCount] = useState(0)
@@ -35,16 +33,19 @@ import './App.css'
 export default App*/
 
 function Login() {
-  const isLogged = useState(false)
-
+  const [isLogged, setLogging] = useState(false)
+  if(!isLogged)
   return (
-    <div className="bg-black h-screen w-screen ">
-      <div className="grid bg-zinc-800 rounded-lg">
-        <img src='./images/bowser.webp' className="w-32 py-2 bg-contain h-auto place-self-center" />
-        <p className="text-gray-100 px-4 " >Hey pas si vite ! Vous n'êtes pas connecté !</p>
-        <button type="submit" className="bg-gray-300 text-black mx-20 my-4 py-1">Se connecter</button>
-      </div>
+    <div className="grid bg-zinc-800 rounded-lg place-self-center">
+      <img src='./images/bowser.webp' className="w-32 py-2 bg-contain h-auto place-self-center" />
+      <p className="text-gray-100 px-4 " >Hey pas si vite ! Vous n'êtes pas connecté !</p>
+      <button onClick={() => setLogging(true)} className="bg-gray-300 text-black mx-20 my-4 py-1">Se connecter</button>
     </div>
   )
+  else{
+    //Home
+  }
+
 }
 export default Login
+
