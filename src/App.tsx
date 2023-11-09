@@ -34,15 +34,16 @@ import './App.css'
 
 export default App*/
 
-function Login(){
+function Login() {
   const isLogged = useState(false)
 
   return (
-    <div className="login">
-      <h1>Login</h1>
-      <form>
-        <button type="submit">Se connecter</button>
-      </form>
+    <div className="bg-black h-screen w-screen ">
+      <div className="grid bg-zinc-800 rounded-lg">
+        <img src='./images/bowser.webp' className="w-32 py-2 bg-contain h-auto place-self-center" />
+        <p className="text-gray-100 px-4 " >Hey pas si vite ! Vous n'êtes pas connecté !</p>
+        <button type="submit" className="bg-gray-300 text-black mx-20 my-4 py-1">Se connecter</button>
+      </div>
     </div>
   )
 }
